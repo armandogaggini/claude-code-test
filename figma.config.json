@@ -1,0 +1,8 @@
+{
+  "fileKey": "CMoFsRR3qIQZLPi7nRoq21",
+  "pluginName": "Design System Editor",
+  "codeConnect": {
+    "enabled": true,
+    "paths": ["./src/**/*.figma.ts"]
+  }
+}

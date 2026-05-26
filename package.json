@@ -1,0 +1,18 @@
+{
+  "name": "test-code-design-system",
+  "version": "1.0.0",
+  "description": "Figma plugin for editing design system frames",
+  "scripts": {
+    "build": "npx webpack --mode production",
+    "watch": "npx webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.90.0",
+    "typescript": "^5.4.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.1"
+  },
+  "keywords": ["figma", "plugin", "design-system"],
+  "license": "MIT"
+}
