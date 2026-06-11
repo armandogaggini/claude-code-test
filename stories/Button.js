@@ -6,11 +6,11 @@ const CHEVRON_SVG = `<svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" v
 
 /**
  * @param {object}  args
- * @param {string}  [args.label='Label']   Button text
- * @param {'filled'|'outlined'|'text'} [args.style='filled']  Visual variant
- * @param {'enabled'|'pressed'|'disabled'} [args.state='enabled']  Interaction state
- * @param {boolean} [args.showIcon=false]  Prepend chevron icon
- * @param {Function} [args.onClick]        Click handler
+ * @param {string}  [args.label='Label']
+ * @param {'filled'|'outlined'|'text'} [args.style='filled']
+ * @param {'enabled'|'pressed'|'disabled'} [args.state='enabled']
+ * @param {boolean} [args.showIcon=false]
+ * @param {Function} [args.onClick]
  * @returns {HTMLButtonElement}
  */
 export const createButton = ({
@@ -23,7 +23,7 @@ export const createButton = ({
   const btn = document.createElement('button');
 
   const classes = ['btn', `btn--${style}`];
-  if (showIcon)           classes.push('btn--has-icon');
+  if (showIcon)            classes.push('btn--has-icon');
   if (state === 'pressed') classes.push('btn--pressed');
   btn.className = classes.join(' ');
 

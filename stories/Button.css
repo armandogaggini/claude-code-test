@@ -6,21 +6,21 @@
 
 /* --- tokens --- */
 :root {
-  --btn-accent-600:       #0fb5ba;
-  --btn-accent-800:       #07818f;
-  --btn-neutral-200:      #cbd2d9;
-  --btn-neutral-300:      #9aa5b1;
-  --btn-neutral-700:      #3e4c59;
+  --btn-accent-600:          #0fb5ba;
+  --btn-accent-800:          #07818f;
+  --btn-neutral-200:         #cbd2d9;
+  --btn-neutral-300:         #9aa5b1;
+  --btn-neutral-700:         #3e4c59;
   --btn-outlined-pressed-bg: #f1f3f9;
-  --btn-font:             'Titillium Web', sans-serif;
-  --btn-font-size:        14px;
-  --btn-font-weight:      600;
-  --btn-line-height:      20px;
-  --btn-letter-spacing:   0.1px;
-  --btn-height:           48px;
-  --btn-radius:           12px;
-  --btn-icon-size:        18px;
-  --btn-gap:              8px;
+  --btn-font:                'Titillium Web', sans-serif;
+  --btn-font-size:           14px;
+  --btn-font-weight:         600;
+  --btn-line-height:         20px;
+  --btn-letter-spacing:      0.1px;
+  --btn-height:              48px;
+  --btn-radius:              12px;
+  --btn-icon-size:           18px;
+  --btn-gap:                 8px;
 }
 
 /* --- base --- */
@@ -51,7 +51,6 @@
   outline-offset: 2px;
 }
 
-/* icon size */
 .btn__icon {
   flex-shrink: 0;
   width:       var(--btn-icon-size);
@@ -64,7 +63,6 @@
 .btn--filled {
   background-color: var(--btn-accent-600);
   color:            #ffffff;
-  padding:          10px 24px;
 }
 
 .btn--filled.btn--has-icon {
@@ -94,7 +92,6 @@
   background-color: transparent;
   border:           1px solid var(--btn-neutral-300);
   color:            var(--btn-neutral-700);
-  padding:          10px 24px;
 }
 
 .btn--outlined.btn--has-icon {

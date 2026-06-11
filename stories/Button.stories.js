@@ -1,10 +1,11 @@
+import './Button.css';
 import { createButton } from './Button';
 
 export default {
-  title:     'Design System/Button',
-  tags:      ['autodocs'],
-  render:    (args) => createButton(args),
-  argTypes:  {
+  title:    'Design System/Button',
+  tags:     ['autodocs'],
+  render:   (args) => createButton(args),
+  argTypes: {
     style: {
       control:     { type: 'select' },
       options:     ['filled', 'outlined', 'text'],
@@ -109,16 +110,14 @@ export const AllVariants = {
       const row = document.createElement('div');
       row.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;align-items:center;';
 
-      const variants = [
+      [
         { state: 'enabled',  showIcon: false },
         { state: 'enabled',  showIcon: true  },
         { state: 'pressed',  showIcon: false },
         { state: 'pressed',  showIcon: true  },
         { state: 'disabled', showIcon: false },
         { state: 'disabled', showIcon: true  },
-      ];
-
-      variants.forEach(({ state, showIcon }) => {
+      ].forEach(({ state, showIcon }) => {
         row.appendChild(createButton({ style, state, showIcon, label: 'Label' }));
       });
 
