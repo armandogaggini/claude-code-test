@@ -1,0 +1,136 @@
+/* ============================================================
+   Tokens — documentation page styles
+   ============================================================ */
+
+.tokens-page {
+  font-family:   'Titillium Web', sans-serif;
+  padding:       40px;
+  background:    #f5f7fa;
+  min-height:    100vh;
+  box-sizing:    border-box;
+}
+
+/* ── Sections ───────────────────────────────────────────────── */
+.tokens-section {
+  margin-bottom: 56px;
+}
+
+.tokens-section__title {
+  margin:          0 0 24px;
+  padding-bottom:  12px;
+  border-bottom:   2px solid #e4e7eb;
+  font-size:       11px;
+  font-weight:     700;
+  text-transform:  uppercase;
+  letter-spacing:  1.5px;
+  color:           #7b8794;
+}
+
+/* ── Palette group ──────────────────────────────────────────── */
+.tokens-group {
+  margin-bottom: 28px;
+}
+
+.tokens-group__label {
+  margin:       0 0 10px;
+  font-size:    13px;
+  font-weight:  600;
+  color:        #3e4c59;
+  letter-spacing: 0.2px;
+}
+
+.tokens-palette {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       8px;
+}
+
+/* ── Swatch card ────────────────────────────────────────────── */
+.tokens-swatch {
+  display:       flex;
+  flex-direction: column;
+  width:         80px;
+  border-radius: 8px;
+  overflow:      hidden;
+  background:    #ffffff;
+  border:        1px solid #e4e7eb;
+  box-shadow:    0 1px 3px rgba(0, 0, 0, 0.06);
+  flex-shrink:   0;
+}
+
+.tokens-swatch__color {
+  height: 60px;
+  width:  100%;
+  display: block;
+}
+
+.tokens-swatch__info {
+  padding:        8px 8px 10px;
+  display:        flex;
+  flex-direction: column;
+  gap:            2px;
+}
+
+.tokens-swatch__step {
+  margin:       0;
+  font-size:    12px;
+  font-weight:  600;
+  color:        #323f4b;
+  line-height:  1.2;
+}
+
+.tokens-swatch__hex {
+  margin:      0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:   10px;
+  color:       #616e7c;
+  line-height: 1.4;
+}
+
+/* ── Effects ────────────────────────────────────────────────── */
+.tokens-effects {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       32px;
+}
+
+.tokens-effect {
+  display:        flex;
+  flex-direction: column;
+  gap:            14px;
+  width:          220px;
+}
+
+.tokens-effect__preview {
+  width:         100%;
+  height:        88px;
+  background:    #ffffff;
+  border-radius: 12px;
+  flex-shrink:   0;
+}
+
+.tokens-effect__name {
+  margin:       0 0 4px;
+  font-size:    13px;
+  font-weight:  600;
+  color:        #3e4c59;
+}
+
+.tokens-effect__desc {
+  margin:       0 0 6px;
+  font-size:    11px;
+  color:        #7b8794;
+}
+
+.tokens-effect__value {
+  margin:       0;
+  font-family:  'Courier New', Courier, monospace;
+  font-size:    10px;
+  color:        #616e7c;
+  line-height:  1.6;
+  word-break:   break-all;
+  background:   #f5f7fa;
+  border:       1px solid #e4e7eb;
+  border-radius: 4px;
+  padding:      6px 8px;
+}
