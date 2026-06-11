@@ -1,0 +1,159 @@
+/* ============================================================
+   Switch — design tokens from Figma "C - Test" design system
+   Props: selected (ON/OFF) × enabled (true/false) × icon (true/false)
+   ============================================================ */
+
+:root {
+  --sw-accent-700:  #099aa4;
+  --sw-accent-400:  #3ae7e1;
+  --sw-accent-100:  #c1fef6;
+  --sw-neutral-100: #e4e7eb;
+  --sw-neutral-400: #7b8794;
+  --sw-text-dark:   #1d2433;
+  --sw-white:       #ffffff;
+  --sw-width:       52px;
+  --sw-height:      32px;
+}
+
+/* --- base track --- */
+.switch {
+  position:         relative;
+  display:          inline-flex;
+  width:            var(--sw-width);
+  height:           var(--sw-height);
+  border-radius:    100px;
+  border:           2px solid transparent;
+  cursor:           pointer;
+  box-sizing:       border-box;
+  padding:          0;
+  background:       none;
+  flex-shrink:      0;
+  transition:       background-color 150ms ease, border-color 150ms ease;
+}
+
+.switch:focus-visible {
+  outline:        2px solid var(--sw-accent-700);
+  outline-offset: 3px;
+}
+
+/* --- thumb --- */
+.switch__thumb {
+  position:         absolute;
+  top:              50%;
+  transform:        translateY(-50%);
+  border-radius:    50%;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  pointer-events:   none;
+  transition:
+    left             200ms cubic-bezier(0.2, 0, 0, 1),
+    width            150ms ease,
+    height           150ms ease,
+    background-color 150ms ease,
+    opacity          150ms ease;
+}
+
+/* --- icon inside thumb --- */
+.switch__icon {
+  width:         16px;
+  height:        16px;
+  flex-shrink:   0;
+  display:       block;
+}
+
+/* ============================================================
+   OFF — not selected
+   ============================================================ */
+
+/* Track: light teal fill, teal border */
+.switch--off {
+  background-color: var(--sw-accent-100);
+  border-color:     var(--sw-accent-700);
+}
+
+/* Thumb (no icon): small 16px teal circle, left side */
+.switch--off .switch__thumb {
+  width:            16px;
+  height:           16px;
+  left:             6px;  /* 2px border + 4px inner gap */
+  background-color: var(--sw-accent-700);
+}
+
+/* Thumb (icon): larger 24px teal circle, left side */
+.switch--off.switch--icon .switch__thumb {
+  width:            24px;
+  height:           24px;
+  left:             6px;
+  background-color: var(--sw-accent-700);
+}
+
+/* Icon color on teal thumb: white */
+.switch--off .switch__icon { color: var(--sw-white); }
+
+/* ============================================================
+   ON — selected
+   ============================================================ */
+
+/* Track: solid teal */
+.switch--on {
+  background-color: var(--sw-accent-700);
+  border-color:     var(--sw-accent-700);
+}
+
+/* Thumb: 24px white circle, right side */
+.switch--on .switch__thumb {
+  width:            24px;
+  height:           24px;
+  left:             22px;  /* 52 - 2px border - 4px gap - 24px thumb */
+  background-color: var(--sw-white);
+}
+
+/* Icon color on white thumb: teal */
+.switch--on .switch__icon { color: var(--sw-accent-700); }
+
+/* ============================================================
+   DISABLED
+   ============================================================ */
+
+.switch--disabled {
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+/* ON + disabled: lighter teal track */
+.switch--on.switch--disabled {
+  background-color: var(--sw-accent-400);
+  border-color:     var(--sw-accent-400);
+}
+
+/* ON + disabled + no icon: light teal thumb */
+.switch--on.switch--disabled:not(.switch--icon) .switch__thumb {
+  background-color: var(--sw-accent-100);
+}
+
+/* ON + disabled + icon: white thumb (same as enabled) */
+.switch--on.switch--disabled.switch--icon .switch__thumb {
+  background-color: var(--sw-white);
+}
+
+/* OFF + disabled + no icon: invisible border, dark translucent thumb */
+.switch--off.switch--disabled:not(.switch--icon) {
+  background-color: var(--sw-accent-100);
+  border-color:     var(--sw-accent-100);
+}
+
+.switch--off.switch--disabled:not(.switch--icon) .switch__thumb {
+  background-color: var(--sw-text-dark);
+  opacity:          0.38;
+}
+
+/* OFF + disabled + icon: grey track, grey thumb */
+.switch--off.switch--disabled.switch--icon {
+  background-color: var(--sw-neutral-100);
+  border-color:     var(--sw-neutral-100);
+}
+
+.switch--off.switch--disabled.switch--icon .switch__thumb {
+  background-color: var(--sw-neutral-400);
+}
