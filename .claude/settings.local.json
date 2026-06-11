@@ -12,7 +12,16 @@
       "mcp__plugin_figma_figma__get_variable_defs",
       "Bash(npm create *)",
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); text=data[0]['text']; frames=[l for l in text.split\\('\\\\n'\\) if '<frame' in l and 'name=' in l]; [print\\(f\\) for f in frames[:60]]\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(npm run *)",
+      "Bash(npx storybook *)",
+      "Bash(gh api *)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(t['path']\\) for t in data.get\\('tree',[]\\) if 'entry-preview' in t['path'] or t['path']=='.nojekyll']\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(t['name']\\) for t in data if 'entry' in t['name'] or 'preview' in t['name']]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('bin:', list\\(d.get\\('bin',{}\\).keys\\(\\)\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('scripts',{}\\), indent=2\\)\\); print\\('---devDeps:'\\); [print\\(k,v\\) for k,v in d.get\\('devDependencies',{}\\).items\\(\\) if 'storybook' in k.lower\\(\\) or 'ghpage' in k.lower\\(\\) or 'pages' in k.lower\\(\\)]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('bin:', d.get\\('bin'\\)\\); print\\('main:', d.get\\('main'\\)\\)\")",
+      "Bash(curl *)"
     ]
   }
 }

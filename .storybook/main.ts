@@ -17,6 +17,10 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag"
+  },
+  viteFinal: async (config) => {
+    config.base = '/claude-code-test/';
+    return config;
   }
 };
 export default config;
