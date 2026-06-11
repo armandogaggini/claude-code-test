@@ -1,17 +1,17 @@
-[15:15:00.698] [INFO] This command is running via an AI agent: claude-code_2-1-146_agent. Proceeding with agentic installation flow.
-[15:15:00.804] [INFO] Initializing Storybook
-[15:15:00.907] [DEBUG] Getting package.json info for /Users/armandogaggini/Desktop/Reply Projects/2. Test Claude/test-code-design-system/package.json...
-[15:15:00.907] [INFO] Package manager: npm
-[15:15:00.908] [DEBUG] Getting CLI versions from NPM for storybook...
-[15:15:00.908] [DEBUG] Executing command: npm info storybook version
-[15:15:01.443] [INFO] Adding Storybook version 10.4.0 to your project
-[15:15:01.443] [DEBUG] Executing command: npm config get min-release-age --workspaces=false --include-workspace-root
-[15:15:01.581] [DEBUG] Using cached package.json for /Users/armandogaggini/Desktop/Reply Projects/2. Test Claude/test-code-design-system/package.json...
-[15:15:01.581] [ERROR] Unable to initialize Storybook in this directory.
+[12:31:20.768] [INFO] [36mInitializing Storybook[39m
+[12:31:20.930] [DEBUG] Getting package.json info for /Users/armandogaggini/Desktop/Reply Projects/2. Test Claude/test-code-design-system/claude-code-test/package.json...
+[12:31:20.930] [INFO] Package manager: npm
+[12:31:20.930] [DEBUG] Getting CLI versions from NPM for storybook...
+[12:31:20.931] [DEBUG] Executing command: npm info storybook version
+[12:31:21.472] [INFO] Adding Storybook version 10.4.3 to your project
+[12:31:21.472] [DEBUG] Executing command: npm config get min-release-age --workspaces=false --include-workspace-root
+[12:31:21.584] [DEBUG] Using cached package.json for /Users/armandogaggini/Desktop/Reply Projects/2. Test Claude/test-code-design-system/claude-code-test/package.json...
+[12:31:21.585] [ERROR] Unable to initialize Storybook in this directory.
 
 Storybook couldn't detect a supported framework or configuration for your project. Make sure you're inside a framework project (e.g., React, Vue, Svelte, Angular, Next.js) and that its dependencies are installed.
 
 Tips:
 - Run init in an empty directory or create a new framework app first.
 - If this directory contains unrelated files, try a new directory for Storybook.
-[15:15:01.583] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
+[12:33:53.963] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":false}
+[12:33:53.971] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry

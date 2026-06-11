@@ -1,0 +1,148 @@
+/* ============================================================
+   Button — design tokens from Figma "C - Test" design system
+   Variants: filled | outlined | text
+   States:   enabled | pressed | disabled
+   ============================================================ */
+
+/* --- tokens --- */
+:root {
+  --btn-accent-600:       #0fb5ba;
+  --btn-accent-800:       #07818f;
+  --btn-neutral-200:      #cbd2d9;
+  --btn-neutral-300:      #9aa5b1;
+  --btn-neutral-700:      #3e4c59;
+  --btn-outlined-pressed-bg: #f1f3f9;
+  --btn-font:             'Titillium Web', sans-serif;
+  --btn-font-size:        14px;
+  --btn-font-weight:      600;
+  --btn-line-height:      20px;
+  --btn-letter-spacing:   0.1px;
+  --btn-height:           48px;
+  --btn-radius:           12px;
+  --btn-icon-size:        18px;
+  --btn-gap:              8px;
+}
+
+/* --- base --- */
+.btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--btn-gap);
+  height:          var(--btn-height);
+  padding:         10px 24px;
+  border:          none;
+  border-radius:   var(--btn-radius);
+  background:      transparent;
+  font-family:     var(--btn-font);
+  font-size:       var(--btn-font-size);
+  font-weight:     var(--btn-font-weight);
+  line-height:     var(--btn-line-height);
+  letter-spacing:  var(--btn-letter-spacing);
+  white-space:     nowrap;
+  cursor:          pointer;
+  text-decoration: none;
+  transition:      background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+  box-sizing:      border-box;
+}
+
+.btn:focus-visible {
+  outline:        2px solid var(--btn-accent-600);
+  outline-offset: 2px;
+}
+
+/* icon size */
+.btn__icon {
+  flex-shrink: 0;
+  width:       var(--btn-icon-size);
+  height:      var(--btn-icon-size);
+}
+
+/* ============================================================
+   FILLED
+   ============================================================ */
+.btn--filled {
+  background-color: var(--btn-accent-600);
+  color:            #ffffff;
+  padding:          10px 24px;
+}
+
+.btn--filled.btn--has-icon {
+  padding: 10px 24px 10px 16px;
+}
+
+.btn--filled:hover:not(:disabled):not(.btn--pressed) {
+  background-color: #0ea0a4;
+}
+
+.btn--filled:active,
+.btn--filled.btn--pressed {
+  background-color: var(--btn-accent-800);
+}
+
+.btn--filled:disabled,
+.btn--filled.btn--disabled {
+  background-color: var(--btn-neutral-200);
+  color:            rgba(255, 255, 255, 0.48);
+  cursor:           not-allowed;
+}
+
+/* ============================================================
+   OUTLINED
+   ============================================================ */
+.btn--outlined {
+  background-color: transparent;
+  border:           1px solid var(--btn-neutral-300);
+  color:            var(--btn-neutral-700);
+  padding:          10px 24px;
+}
+
+.btn--outlined.btn--has-icon {
+  padding: 10px 24px 10px 16px;
+}
+
+.btn--outlined:hover:not(:disabled):not(.btn--pressed) {
+  border-color:     var(--btn-neutral-700);
+  background-color: rgba(62, 76, 89, 0.04);
+}
+
+.btn--outlined:active,
+.btn--outlined.btn--pressed {
+  border-color:     var(--btn-neutral-700);
+  background-color: var(--btn-outlined-pressed-bg);
+}
+
+.btn--outlined:disabled,
+.btn--outlined.btn--disabled {
+  border-color: var(--btn-neutral-200);
+  color:        rgba(29, 36, 51, 0.38);
+  cursor:       not-allowed;
+}
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+.btn--text {
+  background-color: transparent;
+  color:            var(--btn-neutral-700);
+  padding:          10px 12px;
+}
+
+.btn--text.btn--has-icon {
+  padding: 10px 16px 10px 12px;
+}
+
+.btn--text:hover:not(:disabled):not(.btn--pressed) {
+  background-color: rgba(62, 76, 89, 0.06);
+}
+
+.btn--text:active,
+.btn--text.btn--pressed {
+  background-color: var(--btn-neutral-200);
+}
+
+.btn--text:disabled,
+.btn--text.btn--disabled {
+  color:  rgba(29, 36, 51, 0.38);
+  cursor: not-allowed;
+}
